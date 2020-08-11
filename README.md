@@ -1,4 +1,4 @@
-Az-securitygroup
+Az_securitygroup
 =========
 
 Creates a Resource Group in Microsoft Azure
@@ -39,7 +39,7 @@ Example Playbook
 ```ansible
 
 - hosts: localhost
-  name: Create Azure Resource Group
+  name: Create Azure Security Group
   vars:
     resourcegroup: resourcegroupname
     location: northeurope
@@ -48,7 +48,7 @@ Example Playbook
   tasks:
     - name: Azure Security Group
       include_role:
-        name: jesperberth.az-securitygroup
+        name: jesperberth.az_securitygroup
       vars:
         networksecuritygroup_name: SG_Network
         rulename: "Allow HTTPS"
