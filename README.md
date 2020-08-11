@@ -21,7 +21,7 @@ tag_owner = Create tag owner with value
 tag_project = Create tag project with value
 networksecuritygroup_name = Security Group Name
 rulename = Name of rule
-ruleprotocol = Protocol type any/tcp/udp/icmp
+ruleprotocol = Protocol type Any/Tcp/Udp/Icmp
 rulesourceaddress = Source IP for any 0.0.0.0/0
 ruledestinationportrange = Target port eg. 443 for HTTPS
 ruleaccess = Allow/Deny
@@ -51,8 +51,8 @@ Example Playbook
         name: jesperberth.az_securitygroup
       vars:
         networksecuritygroup_name: SG_Network
-        rulename: "Allow HTTPS"
-        ruleprotocol: "tcp"
+        rulename: "AllowHTTPS"
+        ruleprotocol: "Tcp"
         rulesourceaddress: 0.0.0.0/0
         ruledestinationportrange: "443"
         ruleaccess: "Allow"
