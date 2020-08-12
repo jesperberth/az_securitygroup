@@ -3,7 +3,7 @@
   azure_rm_securitygroup:
     resource_group: "{{ resourcegroup }}"
     name: "{{ networksecuritygroup_name }}"
-    purge_rules: yes
+    purge_rules: no
     rules:
         - name: "{{ rulename }}"
           protocol: "{{ ruleprotocol }}"
