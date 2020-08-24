@@ -41,7 +41,7 @@ Example Playbook
 - hosts: localhost
   name: Create Azure Security Group
   vars:
-    resourcegroup: resourcegroupname
+    resourcegroup_name: resourcegroupname
     location: northeurope
     tag_owner: jesper
     tag_project: demoproject
@@ -50,6 +50,7 @@ Example Playbook
       include_role:
         name: jesperberth.az_securitygroup
       vars:
+        resourcegroup: "{{ resourcegroup_name }}"
         networksecuritygroup_name: SG_Network
         rulename: "AllowHTTPS"
         ruleprotocol: "Tcp"
