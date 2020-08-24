@@ -66,7 +66,7 @@ With Multible rules in a loop
 - hosts: localhost
   name: Create Azure Security Group
   vars:
-    resourcegroup: resourcegroupname
+    resourcegroup_name: resourcegroupname
     location: northeurope
     tag_owner: jesper
     tag_project: demoproject
@@ -75,6 +75,7 @@ With Multible rules in a loop
       include_role:
         name: jesperberth.az_securitygroup
       vars:
+        resourcegroup: "{{ resourcegroup_name }}"
         networksecuritygroup_name: "{{ item.networksecuritygroup_name }}"
         rulename: "{{ item.rulename }}"
         ruleprotocol: "{{ item.ruleprotocol }}"
